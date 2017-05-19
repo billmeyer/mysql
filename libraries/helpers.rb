@@ -13,12 +13,12 @@ module MysqlCookbook
     end
 
     def wheezy?
-      return true if node['platform'] == 'debian' && node['platform_version'].to_i == 7
+      return true if node['platform_family'] == 'debian' && node['platform_version'].to_i == 7
       false
     end
 
     def jessie?
-      return true if node['platform'] == 'debian' && node['platform_version'].to_i == 8
+      return true if node['platform_family'] == 'debian' && node['platform_version'].to_i == 8
       false
     end
 
